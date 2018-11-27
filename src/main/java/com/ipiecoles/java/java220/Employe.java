@@ -15,6 +15,25 @@ public class Employe {
     private Double salaire;
 
 
+    //constructeurs
+    public Employe() {}
+
+    public Employe(String nom, String prenom, String matricule, LocalDate dateEmbauche, Double salaire) {
+        this.nom = nom;
+        this.prenom = prenom;
+        this.matricule = matricule;
+        this.DateEmbauche = dateEmbauche;
+        this.salaire = salaire;
+    }
+
+    //methodes fonctionnelles
+    public final Integer getNombreAnneeAnciennete() {
+
+        return LocalDate.now().getYear() - DateEmbauche.getYear();
+
+    }
+
+
     //getters / setteurs
     public String getNom() {
         return nom;
@@ -54,23 +73,5 @@ public class Employe {
 
     public void setSalaire(Double salaire) {
         this.salaire = salaire;
-    }
-
-
-    //constructeurs
-    public Employe() {}
-
-    public Employe(String nom, String prenom, String matricule, LocalDate dateEmbauche, Double salaire) {
-        this.nom = nom;
-        this.prenom = prenom;
-        this.matricule = matricule;
-        this.DateEmbauche = dateEmbauche;
-        this.salaire = salaire;
-    }
-
-    //methodes
-    protected getNombreAnneeAnciennete() {
-
-
     }
 }
