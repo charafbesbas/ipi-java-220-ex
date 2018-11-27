@@ -7,7 +7,7 @@ import java.util.Objects;
 /**
  * Created by pjvilloud on 21/09/17.
  */
-public class Employe {
+public abstract class Employe {
 
     //attributs
     private String nom;
@@ -39,6 +39,8 @@ public class Employe {
 
         this.salaire = this.getSalaire() * (1 + pourcentage);
     }
+
+    public abstract Double getPrimeAnnuelle();
 
     //getters / setteurs
     public String getNom() {
